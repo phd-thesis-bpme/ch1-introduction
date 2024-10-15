@@ -58,23 +58,31 @@ Finally, I will provide some thoughts about the future of detectability research
 By realizing the tools that we have available to us, and by having the biological knowledge of what affects detectability, we can be sure that data-driven estimates of detectability are going to be biologically sound.
 
 \par In Chapter 3, I expand upon the work of \citet{solymos_calibrating_2013} and \citet{solymos_evaluating_2018} by providing a pipeline by which we can systematically estimate detection probabilities for North American landbirds, by accounting for factors of detectability such as time of day, time of year, forest coverage, and road proximity.
-This broad-scale approach allows us to both corroborate our current knowledge of detectability in birds, as well as challenge what we think we know, by providing estimates across a suite of landbird taxa.
-Additionally, by enacting an open-science protocol and creating an R package for these estimates, I facilitate a way to move forward with using these detectability estimates in future conservation problems.
+Bird monitoring in North America over several decades has generated many open databases, housing millions of structured and semi-structured bird observations. 
+These provide the opportunity to estimate bird densities and population sizes, once variation in factors such as underlying field methods, timing, land cover, proximity to roads, and uneven spatial coverage are accounted for. 
+To facilitate that integration across databases, I use this chapter to introduce NA-POPS: Point Count Offsets for Population Sizes of North American Landbirds. 
+NA-POPS is a large-scale, multi-agency project providing an open-source database of detectability functions for all North American landbirds. 
+These detectability functions allow the integration of data from across disparate survey methods using the QPAD approach, which considers the probability of detection (q) and availability (p) of birds in relation to area (a) and density (d). 
+As of this chapter, NA-POPS has compiled over 7.1 million data points spanning 292 projects from across North America, and produced detectability functions for 338 landbird species. 
+In this chapter, I describe the methods used to curate these data and generate these detectability functions, as well as the open-access nature of the resulting database. 
+I also provide a worked example of estimating probabilities of detection across a range of covariates for American Robin (\textit{Turdus migratorius}).
+
 
 \par The broad-scale estimation of detection probabilities works well for species where we have sufficient data, but fails to provide estimates for species of landbirds that are rare or undersampled.
-Thus, in Chapter 4, I develop a Bayesian hierarchical multi-species modelling approach to estimating detectability in landbirds, such that birds with small sample sizes can ``borrow" information from data-rich species that are similar in traits and/or phylogeny.
-By doing this, I provide a potential approach to then predict detection probabilities for species of birds where we have no data points.
+There is therefore a need for methodology that provides detection estimates for species that are rare or undersampled, which generally lack sufficient data for accurate estimates. 
+Thus, in Chapter 4, I take advantage of similarities in detection probabilities among phylogenetically-related species and species with similar traits to estimate detection probabilities in seven species of rare North American birds.
+I develop a hierarchical Bayesian multi-species removal model and distance model to facilitate this modelling approach, which allows species with fewer data points to ``borrow" information from similar species with more data points via statistical shrinkage. 
+I show that a multi-species model improves precision of detectability estimates for species with low sample size, and even with species up to 1000 observations.
+However, when no data were available for a species, the multi-species models tended to be overly conservative in predicting detectability. 
 
 \par While Chapters 3 and 4 focus on the data-driven estimates of detectability, Chapter 5 focuses on an application of these estimates.
 Here, I modify the current status and trend model for the BBS \citep{smith_spatially_2023} to allow it to explicitly account for detectability in trend calculation, while also propagating forward the variance associated with the estimated detection functions.
-I demonstrate using a case study how not accounting for detectability in the BBS can given us very different estimates of trends on fine-scales, because we cannot account for changes in landscape that affect changes in detectability.
+I demonstrate, using a case study of a forest-dwelling warbler in Canada, how not accounting for detectability in the BBS can given us very different estimates of trends on fine-scales, because we otherwise cannot account for changes in landscape that affect changes in detectability.
 
-\par In Chapter 6, I look toward alternative ways of estimating detectability, specifically using autonomous recording units.
+\par Finally, in Chapter 6, I look toward the future of detectability research and pose (TO DO, INSERT NUMBER) research questions and avenues that I feel are the most important questions in detectability research moving forward.
+These questions stem from multiple fronts, ranging from the research output of Chapters 3 - 5, to conversations with colleagues in a detectability working group, to conversations with biologists in the field.
+I also provide a small case study of looking toward alternative ways of estimating detectability, specifically using autonomous recording units.
 Up until recent decades, most bird data have been collected by humans in the field.
 However, humans are notoriously bad at judging distance to birds, which often results in poor estimates of detection distance.
-In this chapter, I suggest a pipeline by which researchers can estimate detectability using autonomous recording units.
-However, given the current state of the field, I provide my thoughts on the several directions that this body of research could go.
-
-\par Finally, in Chapter 7, I pose (TO DO, INSERT NUMBER) research questions and avenues that I feel are the most important questions in detectability research moving forward.
-These questions stem from multiple fronts, ranging from the research output of Chapters 3 - 6, to conversations with detectability working groups, to conversations with biologists in the field.
+In the case study, I suggest a pipeline by which researchers can estimate detectability using autonomous recording units, and provide my thoughts on the several directions that this body of research could go.
 
