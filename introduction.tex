@@ -4,25 +4,25 @@
 As with most questions in ecology, the answer can be most easily summed up with two words: ``it depends."
 
 \par For much of the existence of humankind, we have been enthralled by birds.
-Ancient civilizations often used the comings and goings of certain animals as omens of good or bad things to come (CITATION).
-These civilizations also figured out how to relate weather patterns to different animals that show up at certain times of year.
-Indigenous groups in North America recognized birds as both living creatures and as food sources for hunting, and closely tracked populations of birds within their territories (CITATION).
+Ancient civilizations often used the comings and goings of certain animals as omens of good or bad things to come \citep{ingersoll_birds_1923}.
+These civilizations also figured out how to relate weather patterns to different animals that show up at certain times of year \citep{mynott_birds_2018}.
+Indigenous groups in North America recognized birds as both living creatures and as food sources for hunting, and closely tracked populations of birds within their territories \citep{pitawanakwat_evening_2022}.
 More recently, humans have formalized the counting of birds.
-This started initially with the Christmas Bird Count---which started as an annual hunt and moved toward a census in the early 1900s---where people across North America count all the birds that they can within their Christmas Bird Count circle.
+This started initially with the Christmas Bird Count---which started as an annual hunt and moved toward a census in the early 1900s---where people across North America count all the birds that they can within their Christmas Bird Count circle \citep{national_audubon_society_audubon_2024}.
 This Christmas Bird Count has provided wintering population numbers for nearly a century \citep{bock_christmas_1981, niven_christmas_2004, national_audubon_society_audubon_2024}.
-In the 1960s, the North American Breeding Bird Survey (BBS herein) began, setting the stage for North America's current gold standard of status and trend estimates for nearly all of North America's Breeding Birds.
-Since then, programs such as eBird, iNaturalist, and others have allowed for the proliferation of bird observation data, by enabling all people who enjoy watching birds to submit their sightings.
+In the 1960s, the North American Breeding Bird Survey (BBS herein) began, setting the stage for North America's current gold standard of status and trend estimates for nearly all of North America's Breeding Birds \citep{sauer_first_2017, hudson_role_2017}.
+Since then, programs such as eBird \citep{sullivan_ebird_2014}, iNaturalist (https://www.inaturalist.org), and others have allowed for the proliferation of bird observation data, by enabling all people who enjoy watching birds to submit their sightings.
 
 \par Today, the millions of bird observations available are used across many conservation problems.
-The BBS has been used for years in Canada and the US as a metric for deciding when and how to list certain bird species as species-at-risk.
-Programs such as the Boreal Avian Modelling project have been able to target remote areas in Canada's Boreal forest to assess the health of the breeding birds there, while also assessing the status of the ecosystem in general.
-eBird has been used across numerous conservation projects, from improving our knowledge of secretive marsh birds \citep{bianchini_using_2023}, to helping to identify threatened species occurrences outside of their known ranges \citep{lin_using_2022}.
-Finally, by combining trend information from the BBS with other targeted surveys, researchers were able to estimate that North America has lost close to three billion birds since the 1970s.
-Not only did they find that habitat specialists are declining due to habitat loss, but they also found that common, generalist species such as House Sparrows (\textit{Passer domesticus}) are also declining.
+The BBS has been used for years in Canada and the US as a metric for deciding when and how to list certain bird species as species-at-risk \citep{hudson_role_2017}.
+Programs such as the Boreal Avian Modelling project \citep{cumming_toward_2010, solymos_bam_2020} have been able to target remote areas in Canada's Boreal forest to assess the health of the breeding birds there, while also assessing the status of the ecosystem in general.
+eBird has been used across numerous conservation projects \citep{sullivan_ebird_2009, sullivan_ebird_2014}, from improving our knowledge of secretive marsh birds \citep{bianchini_using_2023}, to helping to identify threatened species occurrences outside of their known ranges \citep{lin_using_2022}.
+Finally, by combining trend information from the BBS with other targeted surveys, researchers were able to estimate that North America has lost close to three billion birds since the 1970s \citep{rosenberg_decline_2019}.
+Not only did they find that habitat specialists are declining due to habitat loss, but they also found that common, generalist species such as House Sparrows (\textit{Passer domesticus}) are also declining \citep{rosenberg_decline_2019}.
 
 \par While it is important to have these data in conservation decision-making, it is also important to have an understanding of the accuracy, precision, biases, and general limitations of the data being used in these conservation problems.
 For most bird surveys, many of these sources of error are accounted for via various modelling approaches.
-For example, the BBS accounts for spatial biases and effects by using instrinsic conditional auto-regressive models \citep{besag_bayesian_1991} to explicitly share information among spatial units \citep{smith_patterns_2023}. 
+For example, the BBS accounts for spatial biases and effects by using instrinsic conditional auto-regressive models \citep{besag_bayesian_1991} to explicitly share information among spatial units \citep{smith_spatially_2023, smith_patterns_2023}. 
 Additionally, the BBS can account for temporal biases and effects, including inter-annual fluctuations, by using generalized additive models \citep{wood_generalized_2017} to flexibly estimate population trajectories \citep{smith_north_2021}.
 The BBS also accounts for other nuisance variables such as observer effects, including the effect of whether a particular observer was a first-time observer \citep{kendall_first-time_1996}.
 With eBird, because there is less structure to the data that is collected, models of relative abundance often take into account effort hours, peak time of day, and observer skill \citep{johnston_estimates_2018, fink_double_2023}.
@@ -31,26 +31,26 @@ With eBird, because there is less structure to the data that is collected, model
 Detectability can be defined as the probability of observing and recording an organism during any biological survey, given the organism is present.
 The presence or absence of an animal at a survey location is an important distinction to make so as to separate detectability from occupancy, which is the probability an animal is actually at a given location.
 Because of this condition, when assessed as a probability, detectability can be a metric of sensitivity or true positive rate.
-As such, detectability becomes important to consider when making conservation decisions based on biological surveys, because it can provide a metric of how confident we are in the survey, particularly with surveys with many zeroes.
+As such, detectability becomes important to consider when making conservation decisions based on biological surveys, because it can provide a metric of how confident we are in the survey, particularly in surveys with many zeroes.
 
 \par Detectability, and various other metrics derived from detectability, can also be used in other modelling exercises.
 For example, detection distance is often used to convert observed abundances in a survey to estimates of true abundance \citep{buckland_introduction_2001, buckland_distance_2015}.
 This is one of the foundational assumptions in population estimation, where we try to estimate densities (or true abundance) of organisms based on the number of organisms that we actually observe.
 In North America, Partners in Flight maintains a population estimates database that is generated by using data from the BBS and estimates of detection distance based on expert opinion \citep{will_handbook_2020, stanton_estimating_2019}.
-These population estimates are of utmost importances to agencies that assess criteria for listing birds based on population sizes, and organizations that manage population numbers (such as for waterfowl and game birds).
-Another use of detectability is to correct for systematic biases that occur during the detection process.
+These population estimates are of utmost importance to agencies that assess criteria for listing birds based on population sizes, and organizations that manage population numbers such as for waterfowl and game birds \citep{canadian_wildlife_service_waterfowl_committee_population_2022}.
+Another use of detectability is to correct for systematic biases that occur during the detection process \citep{johnson_defense_2008, solymos_calibrating_2013}.
 For example, the Boreal Avian Modelling project use estimates of detectability to correct for time of year, time of day, and environmental factors during surveys, all of which affect detectability in birds \cite{solymos_lessons_2020, solymos_evaluating_2018, marsh_correcting_1989}.
 By applying detectability as a statistical offset, counts from disparate surveys can be corrected for the survey-specific detectability factors, allowing for integration of data.
 
 \par Given the importance of detectability for conservation and management decisions, it is clear to see why we would want to have accurate and precise estimates of detectability for as many organisms as possible.
 For many organisms, it is important to be able to even have an estimate to begin with \citep{bennett_how_2024}.
 Luckily for the birds, there are millions of data points that exist across hundreds of projects in North America that have been collected over a huge range of spatial, temporal, and environmental scales.
-Not only that, but recent advances in modelling have created flexible ways of specifically estimating detectability based on these surveys \citep{solymos_calibrating_2013}, by combining modelling techniques like removal sampling \citep{alldredge_time--detection_2007, farnsworth_removal_2002} and distance sampling \citep{buckland_introduction_2001}.
+Not only that, but recent advances in modelling have created flexible ways of specifically estimating detectability based on these surveys \citep{solymos_calibrating_2013}, by combining modelling techniques like removal sampling \citep{alldredge_time--detection_2007, farnsworth_removal_2002} and distance sampling \citep{buckland_introduction_2001, buckland_distance_2015}.
 With the push for more open data in ecology, particularly in this era of Big Data \citep{binley_minimizing_2023}, we are now at a point where we can systematically estimate detectability in landbirds using data-driven approaches, while being able to account for a number of factors that influence detectability.
 
 \par In this thesis, I will focus on the goal of estimating detection probabilities using data-driven approaches.
 In particular, I will focus on estimating detectability for landbirds across North America.
-This body of research comes at a key moment in bird conservation: we know that populations are decreasing across the continent, and we know that there are systematic biases that prevent us from truly understanding how many birds are actually out there.
+This body of research comes at a key moment in bird conservation: we know that populations are decreasing across the continent, and we know that there are systematic biases that prevent us from truly understanding how many birds are actually out there \citep{stanton_estimating_2019, solymos_calibrating_2013, solymos_lessons_2020}.
 Thus, this thesis will seek to use these data-driven approaches to estimates detectability for as many landbird species as possible.
 Additionally, I will showcase an application of these data-driven detectability estimates toward the North American Breeding Bird Survey, by applying the detectability estimates as offsets to correct for changes in landscape over time.
 Finally, I will provide some thoughts about the future of detectability research, particularly with the advancement of autonomous recording units.
@@ -58,7 +58,7 @@ Finally, I will provide some thoughts about the future of detectability research
 \section{Research Approach}
 
 \par In Chapter 2, entitled ``What affects detectability in landbirds, and how do we model it?", I conduct a literature review that a) describes the detection process of birds in detail, b) reviews the known factors that affect detectability in birds, and c) reviews the methodological advancements and current state of the literature in detectability research.
-This chapter will also provide a description of the equations that I will be using throughout the rest of this thesis, particularly equations related to removal modelling and distance modelling.
+This chapter provides a description of the equations that I will be using throughout the rest of this thesis, particularly equations related to removal modelling and distance modelling.
 I will also introduce many of the terms that will be used throughout this thesis.
 In essence, this chapter will serve as a review of the known state of detectability research in landbirds, and also serve as a scaffolding chapter for the subsequent data chapters.
 By realizing the tools that we have available to us, and by having the biological knowledge of what affects detectability, we can be sure that data-driven estimates of detectability are going to be biologically sound.
