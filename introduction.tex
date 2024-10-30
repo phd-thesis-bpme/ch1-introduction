@@ -15,7 +15,7 @@ Since then, programs such as eBird \citep{sullivan_ebird_2014}, iNaturalist (htt
 
 \par Today, the millions of bird observations available are used across many conservation problems.
 The BBS has been used for years in Canada and the US as a metric for deciding when and how to list certain bird species as species-at-risk \citep{hudson_role_2017}.
-Programs such as the Boreal Avian Modelling project \citep{cumming_toward_2010, solymos_bam_2020} have been able to target remote areas in Canada's Boreal forest to assess the health of the breeding birds there, while also assessing the status of the ecosystem in general.
+Programs such as the Boreal Avian Modelling project \citep{cumming_toward_2010, solymos_bam_2020} have been able to target remote areas in North America's Boreal forest to assess the health of the breeding birds there, while also assessing the status of the ecosystem in general.
 eBird has been used across numerous conservation projects \citep{sullivan_ebird_2009, sullivan_ebird_2014}, from improving our knowledge of secretive marsh birds \citep{bianchini_using_2023}, to helping to identify threatened species occurrences outside of their known ranges \citep{lin_using_2022}.
 Finally, by combining trend information from the BBS with other targeted surveys, researchers were able to estimate that North America has lost close to three billion birds since the 1970s \citep{rosenberg_decline_2019}.
 Not only did they find that habitat specialists are declining due to habitat loss, but they also found that common, generalist species such as House Sparrows (\textit{Passer domesticus}) are also declining \citep{rosenberg_decline_2019}.
@@ -48,8 +48,7 @@ Luckily for the birds, there are millions of data points that exist across hundr
 Not only that, but recent advances in modelling have created flexible ways of specifically estimating detectability based on these surveys \citep{solymos_calibrating_2013}, by combining modelling techniques like removal sampling \citep{alldredge_time--detection_2007, farnsworth_removal_2002} and distance sampling \citep{buckland_introduction_2001, buckland_distance_2015}.
 With the push for more open data in ecology, particularly in this era of Big Data \citep{binley_minimizing_2023}, we are now at a point where we can systematically estimate detectability in landbirds using data-driven approaches, while being able to account for a number of factors that influence detectability.
 
-\par In this thesis, I will focus on the goal of estimating detection probabilities using data-driven approaches.
-In particular, I will focus on estimating detectability for landbirds across North America.
+\par In this thesis, I will focus on the goal of estimating detection probabilities using data-driven approaches, with a particular focus on North American landbirds.
 This body of research comes at a key moment in bird conservation: we know that populations are decreasing across the continent, and we know that there are systematic biases that prevent us from truly understanding how many birds are actually out there \citep{stanton_estimating_2019, solymos_calibrating_2013, solymos_lessons_2020}.
 Thus, this thesis will seek to use these data-driven approaches to estimates detectability for as many landbird species as possible.
 Additionally, I will showcase an application of these data-driven detectability estimates toward the North American Breeding Bird Survey, by applying the detectability estimates as offsets to correct for changes in landscape over time.
@@ -57,7 +56,7 @@ Finally, I will provide some thoughts about the future of detectability research
 
 \section{Research Approach}
 
-\par In Chapter 2, entitled ``What affects detectability in landbirds, and how do we model it?", I conduct a literature review that a) describes the detection process of birds in detail, b) reviews the known factors that affect detectability in birds, and c) reviews the methodological advancements and current state of the literature in detectability research.
+\par In Chapter 2, entitled ``What affects detectability in landbirds, and how do we model it?", I conduct a brief literature review that a) describes the detection process of birds in detail, b) reviews the known factors that affect detectability in birds, and c) reviews the methodological advancements and current state of the literature in detectability research.
 This chapter provides a description of the equations that I will be using throughout the rest of this thesis, particularly equations related to removal modelling and distance modelling.
 I will also introduce many of the terms that will be used throughout this thesis.
 In essence, this chapter will serve as a review of the known state of detectability research in landbirds, and also serve as a scaffolding chapter for the subsequent data chapters.
@@ -87,8 +86,8 @@ Here, I modify the current status and trend model for the BBS \citep{smith_spati
 I demonstrate, using a case study of a forest-dwelling warbler in Canada, how not accounting for detectability in the BBS can given us very different estimates of trends on fine-scales, because we otherwise cannot account for changes in landscape that affect changes in detectability.
 
 \par Chapter 6, entitled ``Conservation Implications, Future Directions, and Closing Remarks" takes a turn away from the mathematical models of Chapters 2 through 5, and examines the implications that all this modelling has for conservation science as a field.
-In particular, I focus on several of the use cases of systematically-derived detectability estimates, and why we should care about having accurate and precise estimates.
-This chapter was inspired by a plenary session given by Professor Gerardo Ceballos at the 2022 Ecological Society of American/Canadian Society for Ecology and Evolution joint conference in Montreal, Quebec, Canada.
+In particular, I focus on several of the potential use cases of systematically-derived detectability estimates in conservation science, and why we should care about having accurate and precise estimates.
+This chapter was partially inspired by a plenary session given by Professor Gerardo Ceballos at the 2022 Ecological Society of American/Canadian Society for Ecology and Evolution joint conference in Montreal, Quebec, Canada.
 In the last 15 minutes of his plenary, he discussed his advice for upcoming and current graduate students in the field of ecology, evolution, conservation science, and other related fields.
 His one piece of advice (to paraphrase him) was to ``make sure that every single piece of research you do has a conservation implication to it", and to ``explicitly make a `conservation implications' section of every single paper that you write".
 Statistical ecology (a field which I believe this thesis firmly falls into) can often be an esoteric field, with conservation implications only being realized far after methods have been developed.
